@@ -352,7 +352,7 @@ class MockPaymentInterceptor {
     }
 }
 MockPaymentInterceptor.ɵfac = function MockPaymentInterceptor_Factory(t) { return new (t || MockPaymentInterceptor)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"])); };
-MockPaymentInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ token: MockPaymentInterceptor, factory: MockPaymentInterceptor.ɵfac });
+MockPaymentInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjectable"]({ token: MockPaymentInterceptor, factory: MockPaymentInterceptor.ɵfac, providedIn: 'root' });
 
 
 /***/ }),
@@ -972,7 +972,8 @@ class MockOrderStaticDataInterceptor {
                     "ingredients": ["ham", "sourdough", "cheddar"],
                     "itemGroup": "sandwich",
                     "img": "./assets/images/specialties/ham_sourdough.png",
-                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't."
+                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't.",
+                    "price": null
                 },
                 {
                     "id": "turkey_sandwich",
@@ -986,7 +987,8 @@ class MockOrderStaticDataInterceptor {
                     ],
                     "itemGroup": "sandwich",
                     "img": "./assets/images/specialties/turkey_sandwich.png",
-                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't."
+                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't.",
+                    "price": null
                 },
                 {
                     "id": "cobb",
@@ -1002,7 +1004,8 @@ class MockOrderStaticDataInterceptor {
                     ],
                     "itemGroup": "salad",
                     "img": "./assets/images/specialties/cobb.png",
-                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't."
+                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't.",
+                    "price": null
                 },
                 {
                     "id": "svens_salad",
@@ -1016,7 +1019,8 @@ class MockOrderStaticDataInterceptor {
                     ],
                     "itemGroup": "salad",
                     "img": "./assets/images/specialties/svens_salad.png",
-                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't."
+                    "description": "This is some sample text describing a sandwich. You should think about this sandwich when you're hungry. But if you have no way of getting this sandwich, maybe don't.",
+                    "price": null
                 }
             ],
             "ingredients": [
@@ -1216,7 +1220,7 @@ class MockOrderStaticDataInterceptor {
     }
 }
 MockOrderStaticDataInterceptor.ɵfac = function MockOrderStaticDataInterceptor_Factory(t) { return new (t || MockOrderStaticDataInterceptor)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"])); };
-MockOrderStaticDataInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: MockOrderStaticDataInterceptor, factory: MockOrderStaticDataInterceptor.ɵfac });
+MockOrderStaticDataInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: MockOrderStaticDataInterceptor, factory: MockOrderStaticDataInterceptor.ɵfac, providedIn: 'root' });
 
 
 /***/ }),
@@ -3475,7 +3479,7 @@ class OrderStaticDataService {
         this.baseUrl = 'https://svenpire.github.io/database.json';
     }
     getOrderStaticData() {
-        const url = this.baseUrl + 'orderStaticData/';
+        const url = this.baseUrl;
         const body = '';
         let htpOptions;
         return this.http.get(url);
