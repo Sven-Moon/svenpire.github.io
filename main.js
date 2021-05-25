@@ -320,7 +320,7 @@ class MockPaymentInterceptor {
         this.store = store;
     }
     intercept(req, next) {
-        if (req.method === 'GET' && req.url == 'http://localhost:3000/api/pay') {
+        if (req.method === 'GET' && req.url == 'https://localhost:3000/api/pay') {
             const result = this.getPayResultsMockData();
             const response = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpResponse"]({
                 body: result
@@ -954,7 +954,7 @@ class MockOrderStaticDataInterceptor {
         this.store = store;
     }
     intercept(req, next) {
-        if (req.method === 'GET' && req.url == 'http://localhost:3000/api/order-static-data/') {
+        if (req.method === 'GET' && req.url == 'https://localhost:3000/api/order-static-data/') {
             const staticData = this.getOrderStaticDataData();
             const response = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpResponse"]({
                 body: staticData
@@ -1900,7 +1900,7 @@ __webpack_require__.r(__webpack_exports__);
 class PaymentService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:3000/';
+        this.baseUrl = 'https://localhost:3000/';
     }
     getPayResultsDB(data) {
         const url = this.baseUrl + 'api/pay';
@@ -3476,7 +3476,7 @@ __webpack_require__.r(__webpack_exports__);
 class OrderStaticDataService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = 'https://svenpire.github.io/database.json';
+        this.baseUrl = 'https://localhost:3000/api/order-static-data/';
     }
     getOrderStaticData() {
         const url = this.baseUrl;
