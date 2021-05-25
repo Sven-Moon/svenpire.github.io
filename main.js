@@ -3472,7 +3472,7 @@ __webpack_require__.r(__webpack_exports__);
 class OrderStaticDataService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:3000/api/order-static-data/';
+        this.baseUrl = 'https://svenpire.github.io/database.json';
     }
     getOrderStaticData() {
         const url = this.baseUrl + 'orderStaticData/';
